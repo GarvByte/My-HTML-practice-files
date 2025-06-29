@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.box{
+    position: relative;
+
+}
+
+.box-text{
+  position: absolute;
+  /* visibility: hidden; */
+  display: none;
+  border: 2px solid green;
+  /* display: inline-block; */
+  margin-left: 5px;
+
+}
+
+.box:hover .box-text{
+  /* visibility: visible; */
+  display: inline-block;
+}
+
+.box2{
+  display: inline-block;
+  border: 2px solid hotpink;
+  margin-top: -50px;
+}
+
+.after{
+  display: inline-block;
+}
+
+.box2::after {
+  /* display: inline-block; */
+  content: " ";
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="box">
+    <p style="display: inline-block;"> Ho  ver me </p>
+    <!-- hover  -->
+   <p class="box-text"> Now click me </p>
+  
+</div>
+
+
+<div class="box2">
+  lorem20
+    <p class="after"> TAke it</p>
+</div>
+
+
+<div>
+  
+</div>
+
+</body>
+</html>

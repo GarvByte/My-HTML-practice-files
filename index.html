@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <!-- <button id="demo" onclick="change()"> Click me </button> -->
+  <p id="demo" onclick="change()"> Clcik me not </p>
+  <img id="image" src="/dice-1.png" alt="oihiohoi" height="150px" style="border: 2px solid green;">
+ <p id="demo2"></p>
+
+
+<script>
+
+function change() {
+  var image = document.getElementById('image');
+  image.src = '/dice-2.png';
+
+}
+
+var x = Math.floor((Math.random() * 10) + 1);
+document.getElementById('demo2').innerHTML = x ;
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+*{
+    margin: 0;
+    padding: 0;
+}
+        #topic {
+            border: 2px solid green;
+        }
+
+        .input-box {
+            border: 2px solid green;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            flex-flow: row wrap;
+            position: absolute;
+        
+        }
+
+        #input-box-field {
+            height: 35px;
+            width: 265px;
+            border-radius: 20px;
+            outline: none;
+            border: 1px solid rgb(123, 0, 255);
+            font-size: 15px;
+            padding-left: 10px;
+            padding-top: 5px;
+        }
+
+        .cancel {
+            border-radius: 20px;
+            border: 1px solid rgb(123, 0, 255);
+            background-color: white;
+            font-size: 15px;
+            margin-top: 20px;
+            padding: 8px 12px;
+            margin-right: 26px;
+        
+        }
+
+        .submit {
+            border-radius: 20px;
+            border: 1px solid rgb(123, 0, 255);
+            background-color: white;
+            font-size: 15px;
+            margin-top: 20px;
+            padding: 8px 12px;
+            margin-left: 26px;
+            margin-bottom: 20px;
+        }
+
+        .submit:hover, .cancel:hover{
+            background-color: rgb(123, 0, 255);
+            color: white;
+        }
+
+        .text {
+            padding: 10px;
+            background-color: rgb(123, 0, 255);
+            color: white;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- <div class="input-box">
+        <h1 id="topic" onclick="pop_up()"> ADD TOPIC </h1>
+        <button class="submit"> OKAY </button>
+        <button id="cancel"> CANCEL </button>
+
+    </div> -->
+
+
+    <center>
+        <div class="input-box-flex">
+            <div class="input-box-form" style="border: 2px solid rgb(123, 0, 255); width: 330px;">
+            <p class="text"> To-do list </p>
+            <input type="text" id="input-box-field" placeholder="Your topic..."> <br>
+            <button type="submit" class="cancel" onclick="pop_up_close()"> Cancel </button>
+            <button type="submit" class="submit" onclick="makinglist()"> Okay </button>
+            </div>
+        </div>
+    </center>
+
+    <script>
+
+         function pop_up() {
+            box = document.getElementsByClassName("input-box")[0];
+            okay = document.querySelector('.submit');
+            cancel = document.querySelector('.cancel');
+            field = document.querySelector("#input-box-field");
+
+            field.style.fontSize = "18px";
+            field.style.height = "30px";
+            field.style.width = "100%";
+            field.style.padding = "5px 5px 5px 8px";
+
+            okay.style.fontSize = "15px";
+            cancel.style.fontSize = "15px";
+
+            okay.style.padding = "8px 12px";
+            cancel.style.padding = "8px 12px";
+
+            okay.style.border = "1px solid rgb(123, 0, 255)";
+            cancel.style.border = "1px solid rgb(123, 0, 255)";
+
+            document.getElementById("outer-div").style.filter = "blur(2px)";
+         }
+        
+    </script>
+    
+</body>
+</html>

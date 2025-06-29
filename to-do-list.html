@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Roboto:wght@300;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .left-side-box {
+            /* border: 2px solid purple; */
+            display: inline-block;
+            max-width: 395px;
+            min-height: 615px;
+            width: 20%;
+            /* background-image: linear-gradient(to bottom  right, rgb(218, 119, 240), #8a4fff); */
+            background-color: #5E17EB;
+            /* border-right: 2px solid rgb(247, 255, 206); */
+            position: absolute;
+
+        }
+
+        #add-topic {
+            /* border: 2px solid green; */
+            padding: 10px 10px;
+            margin: 50px 20px;
+            font-size: 20px;
+            border-radius: 40px;
+            display: inline-block;
+            color: rgb(0, 0, 0);
+            vertical-align: center;
+            font-family: 'Roboto', sans-serif;
+            background-image: linear-gradient(to bottom right, rgb(255 255 255), rgb(185 186 255));
+
+        }
+
+        #add-topic:hover {
+            box-shadow: 0px 0px 10px rgb(234 224 255);
+        }
+
+        #topic-name0 {
+            padding-left: 30px;
+            font-size: 34px;
+            margin-bottom: 30px;
+            color: rgb(255, 255, 255);
+            display: block;
+            font-family: 'Square Peg', cursive;
+        }
+
+        #topic-name1 {
+            padding-left: 30px;
+            font-size: 34px;
+            margin-bottom: 30px;
+            color: black;
+            display: block;
+            font-family: 'Square Peg', cursive;
+
+        }
+
+        .right-side-box {
+            display: inline-block;
+            /* border: 2px solid green; */
+            width: 80%;
+            /* position: absolute; */
+            vertical-align: top;
+            /* background-image: linear-gradient(to right, rgb(218, 119, 240), #8a4fff); */
+            background-color: #5E17EB;
+            margin-left: 20%;
+        }
+
+        .topic-name-focus {
+            margin-top: 85px;
+            margin-left: 20px;
+            color: white;
+            /* margin-right: 600px; */
+            /* display: inline-block; */
+            font-family: 'Square Peg', cursive;
+            font-size: 40px;
+        }
+
+        #sign-in {
+            display: inline-block;
+            /* border: 2px solid black; */
+            border-radius: 30px;
+            padding: 5px 10px;
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+            margin-right: 25px;
+            margin-bottom: 20px;
+            /* float: right; */
+            color: rgb(0, 0, 0);
+            background-color: rgb(255, 204, 0);
+
+        }
+
+        #sign-in:hover {
+            box-shadow: 0px 0px 10px rgb(255, 174, 0);
+        }
+
+        #date {
+            margin-left: 20px;
+            margin-top: 10px;
+            display: inline-block;
+            margin-right: 311px;
+            color: white;
+        }
+
+        .input-box-flex {
+            display: flex;
+            justify-content: center;
+            flex-flow: row wrap;
+            position: absolute;
+            bottom: 32%;
+            left: 40%;
+
+
+        }
+
+        #input-box-field {
+            height: 0px;
+            width: 0px;
+            border-radius: 20px;
+            outline: none;
+            border: 0px solid rgb(123, 0, 255);
+            font-size: 0px;
+            padding-left: 0px;
+            padding-top: 0px;
+        }
+
+        .input-box-form {
+            border-radius: 15px;
+        }
+
+        .submit {
+            border-radius: 20px;
+            border: 0px solid rgb(123, 0, 255);
+            background-color: white;
+            font-size: 0px;
+            margin-top: 20px;
+            padding: 0px;
+            margin-left: 26px;
+            margin-bottom: 20px;
+        }
+
+        .cancel {
+            border-radius: 20px;
+            border: 0px solid rgb(123, 0, 255);
+            background-color: white;
+            font-size: 0px;
+            margin-top: 20px;
+            padding: 0px;
+            margin-right: 26px;
+
+        }
+
+        .submit:hover,
+        .cancel:hover {
+            background-color: rgb(123, 0, 255);
+            color: white;
+        }
+
+        .outer-wrapper {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .list-styling {
+            list-style-type: none;
+            margin-bottom: 20px;
+            /* color: black ; */
+            /* font-family: 'Square Peg', cursive;
+            font-size: 30px; */
+
+        }
+
+        .list-styling:hover {
+            text-shadow: 2px 2px 10px white;
+        }
+
+        .list-styling2 {
+            color: black;
+            margin-bottom: 20px;
+            list-style-type: none;
+            font-size: 30px;
+        }
+
+        .text {
+            padding: 0px;
+            background-color: rgb(123, 0, 255);
+            color: white;
+            font-size: 0px;
+            margin-bottom: 20px;
+            border-radius: 10px 10px 0 0;
+            font-family: 'Square Peg', cursive;
+        }
+
+        .input-box-form {
+            border: 0px solid rgb(123, 0, 255);
+            width: 330px;
+        }
+
+        #topic_taker {
+            /* padding: 10px 10px; */
+            /* margin: 50px 20px; */
+            font-size: 20px;
+            border-radius: 30px;
+            padding: 5px 10px;
+            display: inline-block;
+            color: rgb(0, 0, 0);
+            vertical-align: center;
+            font-family: 'Roboto', sans-serif;
+            background-image: linear-gradient(to bottom right, rgb(255 255 255), rgb(185 186 255));
+        }
+
+        #topic_taker:hover {
+            box-shadow: 0px 0px 10px rgb(234 224 255);
+        }
+
+        .taskbox {
+            /* border: 2px solid green; */
+            width: 30%;
+            display: inline-block;
+            color: black;
+            margin-left: 20%;
+        }
+
+        /* #outer-div {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+        } */
+    </style>
+</head>
+
+<body>
+    <div id="outer-div">
+        <div class="outer-wrapper">
+            <div class="left-side-box">
+                <h1 id="add-topic" onclick="calling1()"> <span class="material-icons"
+                        style="font-size:24px; vertical-align: top;"> add </span> ADD LIST </h1>
+
+                <ul id="topic-name0"> </ul>
+            </div>
+
+
+            <div class="right-side-box">
+                <h1 class="topic-name-focus"> My Day </h1>
+                <p id="date"> 12 January, 2022 </p>
+                <p id="sign-in"> Sign In </p>
+                <p id="topic_taker" onclick="calling2()"> <span class="material-icons" style="vertical-align: bottom">
+                        add
+                    </span> Add Topic </p>
+
+            </div>
+
+            <div class="taskbox">
+                <ul id="topic-name1">
+                    <li class="list-styling2"> </li>
+                    <li class="list-styling2"> </li>
+                    <li class="list-styling2"> </li>
+                    <li class="list-styling2"> </li>
+                    <li class="list-styling2"> </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERE IS THE INPUT BOX  -->
+    <center>
+        <div class="input-box-flex">
+            <div class="input-box-form">
+                <p class="text"> To-do list </p>
+                <input type="search" id="input-box-field" placeholder="Your topic..." onfocus="this.value=''"> <br>
+                <button type="submit" class="cancel" onclick="pop_up_close()"> Cancel </button>
+                <button type="submit" class="submit" onclick="makinglist()"> Okay </button>
+            </div>
+        </div>
+    </center>
+
+    <!-- sign in  -->
+
+    <script>
+
+        // global variables 
+        add_list = [];
+        let z;
+        let n;
+
+        list1 = [];
+        list2 = [];
+        list3 = [];
+        list4 = [];
+        list5 = [];
+        add = document.getElementsByClassName('input-box')[0];
+
+        const d = new Date();
+        document.getElementById("date").innerHTML = d;
+
+
+        function calling1() {
+            z = 0;
+            pop_up();
+        }
+
+        function calling2() {
+            z = 1;
+            pop_up();
+        }
+
+        document.getElementById('topic_taker').addEventListener('click', function () {
+            n = 1;
+
+        })
+
+        
+
+        function makinglist() {
+            // console.log(z);
+            value = document.getElementById("input-box-field").value;
+            console.log(makinglist);
+            var list = document.createElement("LI");
+            var list2 = document.createElement("LI");
+            list.innerHTML = value;
+            list2.innerHTML = value;
+
+            list.classList.add("list-styling");
+            list2.classList.add("list-styling2");
+            add_list.push(value);
+
+            if(n == 1){
+            document.getElementsByClassName("list-styling2")[0].innerHTML = value;
+            list1.push(value)
+            n = 0;
+            // console.log(add_list);
+            }
+
+            
+
+            if (z == 0) {
+                document.getElementById('topic-name' + z).append(list);
+            }
+
+            if (z == 1) {
+            document.getElementById('topic-name' + z).append(list2);
+
+            }
+
+            pop_up_close();
+        }
+
+        document.getElementsByClassName('list-styling')[0].addEventListener("click", function(){
+                document.getElementsByClassName("list-styling2")[0].innerHTML = list2;
+            })
+       
+
+        function pop_up() {
+            box = document.getElementsByClassName("input-box")[0];
+            okay = document.querySelector('.submit');
+            cancel = document.querySelector('.cancel');
+            field = document.querySelector("#input-box-field");
+
+            okay.style.fontSize = "15px";
+            cancel.style.fontSize = "15px";
+
+            okay.style.padding = "8px 12px";
+            cancel.style.padding = "8px 12px";
+
+            okay.style.border = "1px solid rgb(123, 0, 255)";
+            cancel.style.border = "1px solid rgb(123, 0, 255)";
+
+            field.style.fontSize = "15px";
+            field.style.height = "35px";
+            field.style.width = "265px";
+            field.style.paddingLeft = "10px";
+            field.style.paddingTop = "5px";
+            field.style.border = "1px solid rgb(123, 0, 255)";
+
+            document.querySelector(".input-box-form").style.border = "2px solid rgb(123, 0, 255";
+            document.querySelector(".text").style.padding = "10px";
+            document.querySelector(".text").style.fontSize = "30px";
+
+            document.getElementById("outer-div").style.filter = "blur(2px)";
+        }
+
+        function pop_up_close() {
+            box = document.getElementsByClassName("input-box")[0];
+            okay = document.querySelector('.submit');
+            cancel = document.querySelector('.cancel');
+            field = document.querySelector("#input-box-field");
+
+            field.style.fontSize = "0px";
+            field.style.height = "0px";
+            field.style.width = "0";
+            field.style.padding = "0";
+            field.style.border = "0px solid purple";
+
+            okay.style.fontSize = "0px";
+            cancel.style.fontSize = "0px";
+
+            okay.style.padding = "0";
+            cancel.style.padding = "0";
+
+            okay.style.border = "0px solid rgb(123, 0, 255)";
+            cancel.style.border = "0px solid rgb(123, 0, 255)";
+
+            // document.querySelector(".input-box-form").style.width = "0px";
+            document.querySelector(".input-box-form").style.border = "0px solid purple";
+            document.querySelector(".text").style.padding = "0px";
+            document.querySelector(".text").style.fontSize = "0px";
+            document.getElementById("outer-div").style.filter = "blur(0px)";
+            field.value = '';
+
+        }
+
+
+        // sign in script ficntion 
+
+
+
+    </script>
+</body>
+
+</html>

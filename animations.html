@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+@keyframes example {
+    0% {background-color: hotpink; left: 0; transform: rotate(0);}
+    50% {left: 50%; transform: rotate(50deg);}
+    100% {background-color: indigo; left: 100%; transform: rotate(100deg);}
+}
+
+div.animation {
+    border: 2px solid green;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    left: 300px;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-duration: 5s;
+    animation-name: example;
+    background-color: hotpink;
+}
+
+@keyframes ex2{
+    0% {left: 30px; top:120px;}
+    25% {left: 188px; top: 120px;}
+    50% {top:188px; left: 188px;}
+    75% {right: 150px; left:30px; top: 188px}
+    100% {right: 188px; bottom: 120px;}
+}
+
+#ex1{
+    border: 2px solid red;
+    width: 10px;
+    height: 0px;
+    animation-name: ex2;
+    top: 120px;
+    animation-duration: 5s;
+    left: 30px;
+    position: relative;
+    animation-iteration-count: infinite;
+
+}
+
+h1{
+    /* border: 2px solid red; */
+    display: inline-block;
+    position: relative;
+    left: 30px;
+    top: 100px;
+    animation-name: ex1;
+    animation-duration: 5s;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="animation">
+
+    </div>
+
+<div id="ex1"> </div>
+    
+
+
+<h1> Animation </h1>
+</body>
+</html>

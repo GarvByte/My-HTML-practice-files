@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scrolling Cover Example</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<style>
+#cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(0);
+  transition: transform 0.5s;
+  z-index: 9999;
+  }
+  
+  #content {
+    height: 2000px; /* Replace with your actual content height */
+  }
+  </style>  
+<body>
+  <div id="cover">
+    <h1>Welcome to My Website</h1>
+    <p>Scroll down to explore</p>
+  </div>
+
+  <div id="content">
+    <!-- Your website content goes here --> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus suscipit expedita aliquam doloremque cumque velit tenetur assumenda perspiciatis laudantium eveniet obcaecati laboriosam ex iusto reprehenderit ratione sapiente iure eligendi soluta illo inventore dicta laborum ipsa, omnis deserunt! Facere, est sequi itaque fugiat quaerat tempore praesentium facilis laborum error at rerum, magnam eius consectetur autem deleniti corporis, dolores atque voluptatem quas voluptate! Corporis sequi doloremque fuga fugiat quos vero asperiores atque nulla exercitationem omnis quas nemo blanditiis, consequatur, excepturi voluptate, voluptatum optio vitae deleniti dolorem nihil beatae autem illum rerum? Nobis sed ipsum cumque saepe velit, placeat a magnam atque porro dolorem aliquam quisquam eveniet delectus architecto itaque praesentium, alias ex. Fugit illo autem assumenda quasi quaerat dolorem quia rerum, ipsam officiis aliquam vitae, in enim omnis? Amet facere nobis aliquid quidem nesciunt quod eveniet eum incidunt voluptatum deserunt aperiam laborum obcaecati, ab nihil eos. Id a esse natus, repellat perspiciatis laborum? Repudiandae, qui fugit! Id fugit omnis illum ullam laboriosam, eligendi eius fugiat cum beatae impedit excepturi quaerat in laudantium, optio soluta nesciunt molestiae! Architecto magnam neque quaerat unde! Veniam, vero est itaque eveniet ea molestias ipsum accusantium vitae tempore doloribus beatae autem optio impedit velit aspernatur, quos soluta aliquam quidem suscipit quasi eius. Modi quae iste illum cupiditate possimus aut, optio quis doloribus et dolorem dolore harum ducimus nemo tempora mollitia. Officia sapiente eaque reprehenderit molestias quo! Illo eaque neque harum. Quod ex repellat quo, quia ipsa ipsum maxime accusantium ea, atque similique laudantium libero quasi error incidunt. Magnam laudantium, beatae temporibus, dolorem nostrum dicta ullam quasi itaque tempore fugiat eligendi pariatur quo nulla tempora, eum eos hic? Dolorum eum natus nesciunt, illo necessitatibus corporis maxime fugiat tempora odit assumenda vel possimus magnam veritatis, dicta incidunt reiciendis nisi eaque adipisci? Magni recusandae necessitatibus vitae corporis. Qui, ducimus consectetur nulla, beatae tempora accusamus blanditiis vitae quas amet molestiae magnam quisquam explicabo assumenda est tempore, quibusdam sunt ipsa enim impedit expedita alias aspernatur a. Laboriosam ullam hic quod voluptatibus doloremque magnam dolor aut odio pariatur? Ullam, facilis. Aut omnis voluptates optio iste. Culpa, architecto dolorum quasi ipsum molestiae eos voluptates voluptatum odio vero. Deleniti voluptatum saepe cumque officia a quaerat voluptatibus at possimus doloribus, eius quibusdam, aut vero! Quia perspiciatis qui eos animi iure hic sint, omnis nostrum culpa, corrupti quos doloribus tempora. Quis illum doloremque fuga placeat? Voluptates eum repellat mollitia possimus laborum iusto vero aut corrupti. At ab non eos quidem molestias ipsum rerum molestiae magnam porro exercitationem, vitae numquam fugit et dolorum vel ratione ex autem quaerat deleniti officia excepturi atque quia? Incidunt cumque temporibus recusandae neque, consequuntur commodi quidem obcaecati ducimus. Obcaecati et laboriosam consequuntur exercitationem voluptate culpa nesciunt magnam numquam vel quaerat ducimus delectus, sapiente aperiam sequi omnis explicabo dicta in maxime!</p>
+  </div>
+
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+  var cover = document.getElementById("cover");
+  var coverHeight = cover.offsetHeight;
+  var content = document.getElementById("content");
+  var prevScrollPos = window.pageYOffset;
+
+  // Function to handle scroll event
+  function handleScroll() {
+    var currentScrollPos = window.pageYOffset;
+    if (currentScrollPos > prevScrollPos) {
+      cover.style.transform = `translateY(-${coverHeight}px)`;
+    } else {
+      cover.style.transform = "translateY(0)";
+    }
+    prevScrollPos = currentScrollPos;
+  }
+
+  // Event listener for scrolling
+  window.addEventListener("scroll", handleScroll);
+});
+
+
+  </script>
+</body>
+</html>

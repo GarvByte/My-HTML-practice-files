@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        @keyframes example {
+            0% {top: 100px; }
+            50% {top: 200px;}
+            100% {top: 100px;}
+        }
+
+        .container{
+            border: 2px solid green;
+            height: 299px;
+           
+        }
+
+        img{
+            position: absolute;
+            top: 100px;
+            animation-duration: 1s;
+            animation-name: example1;
+            /* animation-iteration-count: infinite; */
+        }
+
+
+
+
+    </style>    
+</head>
+<body>
+
+    <div class="container">
+        <div class="animation">
+            <img id="character" src="\Detective_Pikachu.png" alt="character" height="100px">
+        </div>
+        <button id = "jump" value = "jump" onclick="jump_button()"> jump </button>
+    </div>
+
+    <script>
+
+        function jump_button() {
+            var x = document.getElementById("character").style.animation = 'example';
+        }
+
+    </script>
+</body>
+</html>

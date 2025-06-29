@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .header{
+            /* border: 2px solid rgb(0, 140, 255); */
+            display: inline-block;
+            vertical-align: middle;
+            /* padding-right: 10px; */
+            background-color: rgb(223, 240, 255);
+            /* background-image: url(https://yt3.ggpht.com/ytc/AAUvwnjoz4Hr8Bj-_HtBYwOfWwrYOrLqfBbUAnqwmlni=s900-c-k-c0x00ffffff-no-rj); */
+
+        }
+
+        .header-div{
+            /* border: 2px solid rgb(0, 140, 255); */
+            /* background-color: rgb(192, 225, 252); */
+            
+        }
+
+        .header-name{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            margin-left: 100px;
+            padding-top: 20px;
+            font-style: bold;
+            text-shadow: 1px 1px 5px red;
+            vertical-align: middle;
+            display: inline-block;
+            padding-left: 10px;
+            
+        }
+
+        .header-name-byGarv{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-left: 200px;
+            padding-bottom: 20px;
+            padding-right: 400px;
+            text-shadow: 1px 1px 5px red;
+            padding-left: 2px;
+            
+        }
+
+        .header-name-subscribe-box{
+            /* border: 2px solid rgb(0, 140, 255); */
+            height: 87px;
+            display: inline-block;
+            vertical-align: middle;
+            /* padding-top: px; */
+            /* padding-bottom: 21px; */
+            padding-left: 130px;
+        }
+
+        .header-name-subscribe{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 30px;
+            display: inline-block;
+            margin-right: 100px;
+            padding-top: 20px;
+            /* padding-left: 50px; */
+            
+        }
+
+        .header-name-subscribe:hover{
+            color: red;
+        }
+
+        .search-button{
+            display: inline-block;
+            padding: 5px;
+            padding-right: 38px;
+            padding-top: 20px;
+            /* border: 1px solid blue; */
+            padding-left: 50px;
+            background-image: url(https://image.shutterstock.com/image-vector/magnifying-glass-search-icon-flat-260nw-738763579.jpg);
+            background-repeat: no-repeat;
+            background-size: 45px;
+            background-position: 0px 22px;
+            
+        }
+
+        .search{
+            padding: 14px;
+            border-bottom: 2px solid rgba(31, 30, 30, 0.781);
+            border-left: 2px solid transparent;
+            border-right: 2px solid transparent;
+            border-top: 2px solid transparent;
+            width: 50%;
+            transition: 0.2s width ease-in-out;
+            /* background-image: url(https://image.shutterstock.com/image-vector/magnifying-glass-search-icon-flat-260nw-738763579.jpg);
+            background-repeat: no-repeat; */
+            border: 1px solid grey;
+            border-radius: 33px;
+            outline: none;
+            
+        }
+        
+        .search:focus{
+            width: 100%;
+            border-color: black;
+        }
+
+        .background-image-div{
+            /* border: 2px solid green; */
+            background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20201026/pngtree-abstract-technology-background-data-technology-background-image_438836.jpg);
+            background-repeat: no-repeat;
+            /* width: 100px; */
+            background-size: 100%;
+            height: 545px;
+        }
+
+        .heading{
+            font-family: sans-serif;
+            margin-left: 68%;
+            font-size: 50px;
+            padding-top: 150px ;   
+            color:rgb(221, 248, 250);   
+        }
+
+        .description{
+            color: rgb(221, 248, 250);
+            margin-left: 68%;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        img{
+            vertical-align: middle;
+            display: inline-block;
+            border: 2px slid red;
+            height: 50px;
+            margin-top: 10px;
+            margin-left: 30px;
+            margin-right: 20px;
+            box-shadow: 1px 1px 2px black;
+
+        }
+
+        #logo-image{
+            /* border: 2px solid green; */
+            display: inline-block;
+            background-image: url(https://yt3.ggpht.com/ytc/AAUvwnjoz4Hr8Bj-_HtBYwOfWwrYOrLqfBbUAnqwmlni=s900-c-k-c0x00ffffff-no-rj);
+            background-size: 40px;
+            background-repeat: no-repeat;
+            background-position: 25px 20px;
+            
+        }        
+
+        #second-section{
+            /* border: 2px solid red; */
+            background-color: rgb(223, 240, 255);
+            padding-top: 50px;
+            
+        }
+
+        .videos-section{
+            font-style: underline;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-left: 60px;
+            font-size: 30px;
+            
+
+        }
+
+        .boxes{
+            /* border: 2px solid blue ; */
+            display: inline-block;
+            box-shadow: 10px 10px grey;
+            /* background-color: rgb(0, 38, 255); */
+            background-color: rgb(248, 59, 26);
+            transition: transform 0.2s ease-in-out;
+
+        }
+
+        .boxes:hover{
+            transform: scale(1.2, 1.2);
+        }
+
+        .boxes-videos{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+            color: white;
+
+
+        }
+
+        .boxes-videos-description{
+            font-family: 'Courier New', Courier, monospace;
+            margin-bottom: 50px;
+            text-align: center;
+            padding: 0 6px;
+            color: white;
+        }
+
+        .section-box{
+        /* border: 2px solid red; */
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        margin: 20px 0 ;
+        padding: 50px 0;
+        }
+
+        .credits{
+            height: 40px;
+            margin-right: 290px;
+            float: right;
+        }
+
+        p:hover div.hello {
+            
+        }
+ 
+
+    </style>
+</head>
+<body>
+
+<header>
+
+<div class="header-div">
+    <div class="header">
+        <!-- <img src="https://yt3.ggpht.com/ytc/AAUvwnjoz4Hr8Bj-_HtBYwOfWwrYOrLqfBbUAnqwmlni=s900-c-k-c0x00ffffff-no-rj"
+        alt="logo" > -->
+
+        <div id="logo-image">
+        <p class="header-name"> TECHY LOOP </p>
+        <p class="header-name-byGarv"> By Garv </p>
+        </div>
+    </div>
+    <div class="header-name-subscribe-box">
+        <p class="header-name-subscribe"> SUBSCRIBE </p>
+
+        <!-- <img src="https://image.shutterstock.com/image-vector/magnifying-glass-search-icon-flat-260nw-738763579.jpg" alt="search-icon" height="50px" style="margin-top: 0px;"> -->
+
+        <form class="search-button">
+            <input class="search" type="text" placeholder="Search...">
+        </form>
+    </div>
+
+</div>
+</header>
+
+
+<div class="background-image-div">
+    <h2 class="heading"> GROW YOUR KNOWLEDGE </h2>
+    <p class="description"> A Website of a youtube channel named Techy Loop By Garv where you can learn about things related to Science<br> & Technology. </p>
+
+    <img class="credits" src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/twitter-icon-18-256.png" alt="logo">
+
+        <img src="https://i.pinimg.com/originals/63/9b/3d/639b3dafb544d6f061fcddd2d6686ddb.png" alt="logo" height="50px" style="float: right;">
+    
+
+</div>
+
+
+<!-- ITS NEXT SECTION  -->
+<!-- <br> <br> -->
+<div id="second-section">
+    <h2 class="videos-section"> What Do You Want ?</h2>
+    <p class="videos-section" style="font-family: 'Courier New', Courier, monospace; font-size: 15px; margin-top: 10px;"> What do you wanna see in my channel,<br> this site is directly connected to my channel </p> <br> <br>
+
+ <div class="section-box">
+
+    <!-- 1ST BOX  -->
+    <div class="boxes">
+        <h2 class="boxes-videos"> Videos </h3> <br>
+            <p class="boxes-videos-description"> Videos that I've <br> uploaded on my <br> channel  is <br> excessible <br> to this box. </p>
+
+
+    </div>
+
+    <!-- 2ND BOX  -->
+    <div class="boxes">
+        <h2 class="boxes-videos"> Playlist </h3> <br>
+            <p class="boxes-videos-description"> Playlists that I've <br> uploaded on my <br> channel  is <br> excessible <br> to this box. </p>
+
+
+    </div>
+
+    <!-- 3RD BOX  -->
+    <div class="boxes">
+        <h2 class="boxes-videos"> Anime </h3> <br>
+            <p class="boxes-videos-description"> Anime videos that <br> I've <br> uploaded on my <br> channel  is <br> excessible <br> to this box. </p>
+
+
+    </div>
+ </div>
+
+<p> Click ME </p>
+ <div class="hello"> HEllo </div>
+
+
+
+
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+/* BOTTOM MEANS GOING FROM BOTTOM TO TOP 
+TOP MEANS GOING FROM BOTTOM TO TOP
+LEFT MEANS GOING FROM LEFT TO RIGHT 
+LEFT AND RIGHT IS FOR HORIZONTAL ALIGNING
+TOP BOTTOM IS FOR VERTICAL ALIGNING */
+
+
+.h2{
+    border: 2px solid purple;
+    width: 50px;
+    right: 200px;
+
+    position: absolute;
+}
+
+.container1{
+    position: absolute;
+    border: 2px solid green;
+    width: 100px;
+    left: 200px;
+}
+
+.h1{
+    border: 2px solid blue;
+}
+
+.text{
+    border: 2px solid green; 
+    left: 500px; 
+    /* height: 1500px  ; */
+    display: inline-block;
+    position: relative;
+}
+
+
+
+.text1{
+    border: 2px solid green; 
+    bottom: 150px; 
+    display: inline-block;
+    position: relative;
+}
+
+.container{
+    border: 2px solid green;
+    width: 50%;
+    height: 400px;
+    left: 24%;
+    position: relative;
+}
+
+.overlay{
+    background-color: hotpink;
+    position: absolute;
+    /* left: 0; */
+    /* right: 0; */
+    bottom: 100%;
+    height: 0;
+    width: 100%;
+    transition: 0.5s ease;
+}
+
+.container:hover .overlay{
+    bottom: 0;
+    height: 100%;
+}
+
+
+    </style>
+</head>
+<body>
+    
+<div class="h1"> 
+   
+        <p class="text"> No Way </p>
+   
+</div>
+
+<div class="h11"> 
+    
+        <p class="text1"> No Way </p>
+    
+</div>
+
+
+<!-- 2ND PART    -->
+
+<div class="container">
+    <div class="overlay">
+
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>

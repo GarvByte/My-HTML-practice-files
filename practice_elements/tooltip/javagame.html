@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+        :root {
+            --style: 'Mochiy Pop P One', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: var(--style);
+        }
+
+        .full-box {
+            /* border: 2px solid green; */
+            /* height: 800px;  */
+            background-image: linear-gradient(to bottom right, #ff4d4d, rgb(229, 100, 255));
+            display: flex;
+            justify-content: center;
+            padding: 67px;
+        }
+
+        #game-box1 {
+            /* border: 2px solid red; */
+            display: inline-block;
+            border-radius: 10px 0 0 10px;
+            background-image: linear-gradient(to bottom right, rgb(253, 197, 255), white);
+            box-shadow: 1px 1px 20px black;
+            
+        }
+
+        #game-box2 {
+            /* border: 2px solid red; */
+            display: inline-block;
+            border-radius: 0 10px 10px 0px;
+            box-shadow: 13px -1px 20px rgba(0, 0, 0, 0.671);
+            background-image: linear-gradient(to bottom right, rgb(255, 179, 179), rgba(255, 208, 208, 0.623));
+        }
+
+        #player-name0 {
+            font-size: 30px;
+            padding: 50px 50px;
+            padding-bottom: 20px;
+            color: rgb(44, 0, 85);
+
+        }
+
+        #player-name1 {
+            font-size: 30px;
+            padding: 50px 50px;
+            padding-bottom: 20px;
+            color: rgb(44, 0, 85);
+        }
+
+        .player0-score {
+            font-size: 40px;
+            color: rgb(255, 0, 0);
+            padding: 2px 190px;
+        }
+
+        .player1-score {
+            font-size: 40px;
+            color: rgb(255, 0, 0);
+            padding: 2px 190px;
+        }
+
+        .score-board1 {
+            /* border: 2px solid black; */
+            padding: 15px 25px;
+            display: inline-block;
+            margin: 100px;
+            /* margin-right: 100px; */
+            background-color: rgb(0, 162, 255);
+            border-radius: 20px;
+
+        }
+
+        .score-board2 {
+            /* border: 2px solid black; */
+            padding: 15px 25px;
+            display: inline-block;
+            margin-top: 100px;
+            background-color: rgb(0, 162, 255);
+            border-radius: 20px;
+
+        }
+
+        #total-score0 {
+            font-size: 25px;
+            padding-top: 10px;
+            color: white;
+            /* margin: 10px 20px; */
+        }
+
+        #total-score02 {
+            font-size: 25px;
+            padding-top: 10px;
+            color: white;
+            /* margin: 10px 20px; */
+        }
+
+        .score-board-number {
+            padding: 2px 25px;
+            color: white;
+        }
+
+        .new-game {
+            /* border: 2px solid black; */
+            display: inline-block;
+            position: absolute;
+            padding: 5px 30px;
+            padding-right: 10px;
+            font-size: 13px;
+            background-image: url('http://dotsandboxes.org/graphics/svg/iconmonstr-refresh-icon.svg');
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: 2px 5px;
+            border-radius: 20px;
+            background-color: white;
+            top: 80px;
+            box-shadow: 0 0 5px black;
+        }
+
+        .roll-dice {
+            /* border: 2px solid black; */
+            display: inline-block;
+            position: absolute;
+            padding: 5px 30px;
+            padding-right: 10px;
+            font-size: 13px;
+            background-image: url('https://cdn3.iconfinder.com/data/icons/christmas-2399/66/42-512.png');
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: 2px 5px;
+            bottom: 240px;
+            border-radius: 20px;
+            background-color: white;
+            box-shadow: 0 0 5px black;
+        }
+
+        .hold {
+            /* border: 2px solid black; */
+            border-radius: 20px;
+            background-color: white;
+            display: inline-block;
+            position: absolute;
+            padding: 5px 30px;
+            padding-right: 10px;
+            font-size: 13px;
+            background-image: url('https://static.vecteezy.com/system/resources/previews/002/132/978/non_2x/hand-holding-something-rgb-color-icon-vector.jpg');
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: 2px 5px;
+            bottom: 170px;
+            box-shadow: 0 0 5px black;
+        }
+
+        .dice {
+            height: 69px;
+            width: 77px;
+            top: 185px;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 75px;
+            background-position: center;
+            box-shadow: 0 0 5px black;
+        }
+
+        #limit {
+            border-radius: 20px;
+            background-color: white;
+            display: inline-block;
+            position: absolute;
+            padding: 5px 12px;
+            padding-right: 10px;
+            font-size: 10px;
+            bottom: 100px;
+            box-shadow: 0 0 5px black;
+        }
+
+        #demo {
+            height: 69px;
+            width: 77px;
+        }
+
+        #winner{
+            position: absolute;
+            top: 20px;
+            color: rgb(255, 230, 0);
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="full-box">
+
+        <!-- PLAYER 1  -->
+        <div id="game-box1">
+            <center>
+                <p id="player-name0" onclick="changeName()"> Enter Name </p>
+                <p class="player0-score"> 0 </p>
+
+                <div class="score-board1">
+                    <p class="score-board-number"> CURRENT </p>
+                    <p id="total-score0"> 0 </p>
+                </div>
+            </center>
+        </div>
+
+        <!-- PLAYER 2  -->
+        <div id="game-box2">
+            <center>
+                <p id="player-name1" onclick="changeName2()"> Enter Name </p>
+                <p class="player1-score"> 0 </p>
+
+                <div class="score-board2">
+                    <p class="score-board-number"> CURRENT </p>
+                    <p id="total-score02"> 0 </p>
+                </div>
+            </center>
+        </div>
+
+        <!-- OVERLAYING ELEMENTS  -->
+
+        <p class="new-game" onclick="newgame()"> NEW GAME </p>
+        <p class="roll-dice" onclick="change2()"> ROLL DICE </p>
+        <p class="hold" onclick="hold()"> HOLD </p>
+        <div class="dice"> <img src="/dice-1.png" alt="Oodne" id="demo"> </div>
+        <p id="limit" onclick="scorelimit()"> Enter Score Limit:  </p>
+        <p id="winner"> WINNER OF THIS GAME IS __</p>
+
+
+
+        <!-- JAVASCRIPT CODE  -->
+
+        <script>
+            // GLOBAL VARIABLE 
+            var roll, mainroll = 0, mainroll2 = 0, activeplayer = 0, limit, person1, person2, hold_score = 0;
+
+        // FUNCTION TO CHANGE THE NAMES OF THE PLAYER 
+           function changeName() {
+               person1 = prompt("Write Player Name: ");
+               document.getElementById('player-name0').innerHTML = person1;
+           }
+
+           function changeName2() {
+               person2 = prompt("Write Player Name: ");
+               document.getElementById('player-name1').innerHTML = person2;
+           }
+
+
+        // THE WINNING SCORE LIMIT 
+           function scorelimit() {
+                limit = prompt("Enter the score limit: ");
+                document.getElementById("limit").innerHTML = "Score Limit: " + limit;
+           }
+           
+        
+        // ROLL THE DICE CHOOSING Function 
+            function change2() {
+                if (activeplayer == 0) {
+                    firstPlayerTurn();
+                }
+
+                // if (activeplayer == 1) {
+                //     secondPlayerTurn();
+                // }
+            }
+
+        // FUNCTION TO ROLL THE DICE FOR PLAYER 1
+            function firstPlayerTurn() {
+
+                var image = document.getElementById('demo');
+                var score = document.getElementsByClassName('player1-score');
+                var random = Math.ceil((Math.random() * 6));
+                document.getElementsByClassName('player0-score').innerHTML = random;
+                var store = 0;
+
+                let diceImg = '/dice-' + random + '.png';
+                console.log(diceImg);
+
+                image.src = diceImg;
+
+                mainroll += random;
+                document.getElementById('total-score0').innerHTML = mainroll;
+
+                // mainroll += random;
+                // document.querySelector(".player0-score").textContent = mainroll;
+                
+                if (random == 1) {
+                    document.getElementById('total-score0').innerHTML = 0;
+                    changeBackground();
+                    activeplayer = 1;
+
+                }
+
+            // TO DECLARE THE WINNER OF THE GAME 
+                if (mainroll >= limit) {
+                    document.getElementById('winner').innerHTML = "WINNER OF THIS GAME IS " + person1;
+                    document.getElementById("game-box1").style.background = "linear-gradient(to bottom right, grey, white)";
+                    document.getElementById("game-box2").style.background = "linear-gradient(to bottom left, grey, white)";
+                    body.disabled = true;
+                }
+            }
+
+            function hold() {
+                if (activeplayer == 0) {
+                    // activeplayer = 1;
+
+                    // mainroll = hold_score;
+                    // console.log(hold_score);
+
+                    // document.getElementById('player0-score').innerHTML = mainroll;
+
+                    hold_score += mainroll;
+                    document.querySelector('.player0-score').innerHTML = hold_score;
+                    // mainroll = hold_score;
+                    // console.log(mainroll);
+                    // document.getElementsByClassName("player0-score").innerHTML = 2;
+                
+                // TO CHANGE THE BACKGROUND COLOR 
+                    // document.getElementById("game-box2").style.background = "linear-gradient(to bottom right, rgb(253, 197, 255), white)";
+                    // document.getElementById("game-box1").style.background = "linear-gradient(to bottom right, rgb(255, 179, 179), rgba(255, 208, 208, 0.623))";
+                    
+                    
+                }
+
+                else {
+                    activeplayer = 1;
+                    // mainroll = hold_score;
+                    // document.getElementById('player0-score').innerHTML = mainroll;
+
+                    document.getElementById("game-box1").style.background = "linear-gradient(to bottom right, rgb(253, 197, 255), white)";
+                    document.getElementById("game-box2").style.background = "linear-gradient(to bottom right, rgb(255, 179, 179), rgba(255, 208, 208, 0.623))";
+   
+                    document.getElementById('total-score02').innerHTML = 0;
+                }
+                console.log(activeplayer);
+            }
+
+        // TO CHANGE THE BACKGROUND COLOR 
+            function changeBackground() {
+
+                if (activeplayer == 0) {
+                document.getElementById("game-box2").style.background = "linear-gradient(to bottom right, rgb(253, 197, 255), white)";
+                document.getElementById("game-box1").style.background = "linear-gradient(to bottom right, rgb(255, 179, 179), rgba(255, 208, 208, 0.623))";
+                }
+
+                if (activeplayer == 1) {
+                document.getElementById("game-box1").style.background = "linear-gradient(to bottom right, rgb(255, 179, 179), rgba(255, 208, 208, 0.623))";
+                document.getElementById("game-box2").style.background = "linear-gradient(to bottom right, rgb(253, 197, 255), white)";
+                }
+            }
+
+         // ROLL THE DICE FUNCTION FOR SECOND PLAYER 
+            function secondPlayerTurn() {
+                var image = document.getElementById('demo');
+                var score = document.getElementsByClassName('player1-score');
+                var random = Math.ceil((Math.random() * 6));
+                var store = 0;
+
+                let diceImg = '/dice-' + random + '.png';
+                console.log(diceImg);
+
+                image.src = diceImg;
+                document.getElementById('total-score02').innerHTML = random;
+
+                mainroll2 += random;
+                document.querySelector(".player1-score").textContent = mainroll2;
+                
+            // TO DECLARE THE VALUE TO 0 WHEN THE NUMBER IS 1
+                if (random == 1) {
+                    document.getElementById('total-score02').innerHTML = 0;
+
+                    document.getElementById("game-box1").style.background = "linear-gradient(to bottom right, rgb(253, 197, 255), white)";
+                    document.getElementById("game-box2").style.background = "linear-gradient(to bottom right, rgb(255, 179, 179), rgba(255, 208, 208, 0.623))";
+                    
+                    activeplayer = 0;
+                    change2();
+                }
+
+            // TO DECLARE THE WINNER OF THE GAME FOR PLAYER 2 
+                if (mainroll2 >= limit) {
+                    document.getElementById('winner').innerHTML = "WINNER OF THIS GAME IS " + person2;
+                    document.getElementById("game-box1").style.background = "linear-gradient(to bottom right, grey, white)";
+                    document.getElementById("game-box2").style.background = "linear-gradient(to bottom left, grey, white)";
+                    body.disabled = true;
+                }
+            }
+
+        // IT WILL RESTART THE GAME 
+            function newgame() {
+                document.getElementById('total-score02').innerHTML = 0;
+                document.querySelector(".player1-score").textContent = 0;
+                mainroll2 = 0;
+
+                document.getElementById('total-score0').innerHTML = 0;
+                document.querySelector(".player0-score").textContent = 0;
+                mainroll = 0;
+                activeplayer = 0;
+
+                document.getElementById("game-box1").style.background = "linear-gradient(to bottom right, rgb(253, 197, 255), white)";
+                document.getElementById("game-box2").style.background = "linear-gradient(to bottom right, rgb(255, 179, 179), rgba(255, 208, 208, 0.623))";
+                document.getElementById('winner').innerHTML = "WINNER OF THIS GAME IS __";
+
+                limit = 0;
+                document.getElementById('limit').innerHTML = "Enter Score Limit: ";
+
+                limit = 0 ? limit == 100 : limit == limit;
+            }
+
+            
+        </script>
+
+</body>
+</html>
